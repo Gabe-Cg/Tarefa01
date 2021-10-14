@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+<body>
+    
+    <!--Crie uma classe chamada "FuncionarioComissionado" com ES6, que herdará os métodos da 
+    classe "Funcionario". A classe "Funcionario" deve ter os seguintes métodos: 
+    constructor(nome, numCTPS, salario) e mostrarDados() para retornar todos os dados de um 
+    funcionário. A classe "FuncionarioComissionado" deve ter os seguintes métodos: 
+    constructor(nome, numCTPS, salario, venda, comissao) e mostrarDados() para retornar todos 
+    os dados de um funcionário comissionado. Em seguida, crie um objeto de cada uma das classes 
+    e mostre os respectivos dados no browser.-->
+        
+
+    <script>
+        class Funcionario {
+            constructor(nome , numCTPS, salario){
+                this.nome = nome;
+                this.numCTPS = numCTPS;
+                this.salario = salario;
+
+            }
+
+            mostrarDados(){
+                return  "</br> Funcionario:</br>" + "Nome: "+ this.nome + " </br>Numero CTPS: " + this.numCTPS + "</br>Salario: " + this.salario + "</br>";
+            }
+        }
+
+        class FuncionarioComissionado extends Funcionario{
+            constructor(nome, numCTPS, salario, venda, comissao){
+                super(nome, numCTPS, salario);
+                this.venda = venda;
+                this.comissao = comissao;
+            }
+
+            mostrar(){
+                return this.mostrarDados() + "</br>venda: " + this.venda + "</br>comissado: " + this.comissao;
+            }
+        }
+        funcionario = new Funcionario("Yuki","555999-01","R$5.500");
+        document.write(funcionario.mostrarDados()); 
+        funcionarioComissionado = new FuncionarioComissionado("joana","444333-02","R$10.070","20", "2%");
+        document.write(funcionarioComissionado.mostrar()); 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio 02</title>
+    </head>
+
+    <body>
+
+        <body>
+
+            <!--2) Escreva código com ES6 diretamente em uma página HTML para criar uma classe chamada 
+            "Carro", que deve ter os seguintes métodos: constructor(nome, ano) e mostrarIdade(). Em 
+            seguida, crie um objeto dessa classe e mostre a seguinte mensagem no browser: O meu carro 
+            tem <mostrar a idade do carro> anos. Por exemplo: O meu carro tem 3 anos.-->
+
+            <script>
+                class Carro {
+                    constructor(nome, ano) {
+                        this.marca = nome;
+                        this.ano = ano;
+                    }
+
+                    mostrarIdade() {
+                        return 'Meu ' + this.marca + " tem " + this.ano + " anos";
+                    }
+                }
+
+                UmCarro = new Carro("Ford", "03");
+                document.write(UmCarro.mostrarIdade());
+            </script>
+
+        </body>
+    </body>
+
+</html>
